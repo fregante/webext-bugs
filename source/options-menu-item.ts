@@ -7,6 +7,8 @@ if (!manifest.options_page && !manifest.options_ui) {
 }
 
 if (!isChrome()) {
+	// TODO: Drop in June 2025. Helps migrating from `webext-tools`
+	void chrome.contextMenus.remove('WEBEXT_TOOLS_OPTIONS');
 	void createContextMenu({
 		id: 'WEBEXT_BUGS_OPTIONS',
 		title: 'Options…',
