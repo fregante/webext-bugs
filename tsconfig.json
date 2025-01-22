@@ -1,0 +1,13 @@
+{
+	"extends": "@sindresorhus/tsconfig",
+	"compilerOptions": {
+		"rootDir": "./source",
+		"outDir": "./distribution",
+		"paths": {
+			"webext-bugs/*": ["./source/*.ts"]
+		},
+	},
+	"include": [
+		"source",
+	]
+}

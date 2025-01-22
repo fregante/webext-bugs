@@ -1,0 +1,21 @@
+{
+	"$schema": "https://json.schemastore.org/chrome-manifest",
+	"name": "webext-bugs",
+	"version": "0.0.0",
+	"manifest_version": 3,
+	"action": {},
+	"permissions": [
+		"contextMenus"
+	],
+	"background": {
+		"type": "module",
+		"service_worker": "background.ts",
+		"scripts": [
+			"background.ts"
+		]
+	},
+	"options_ui": {
+		"page": "options.html",
+		"open_in_tab": true
+	}
+}

@@ -1,0 +1,81 @@
+{
+	"name": "webext-bugs",
+	"version": "0.0.0",
+	"description": "WebExtension module: Useful fixes and workarounds for browser extension shortcomings",
+	"keywords": [
+		"browser",
+		"chrome",
+		"safari",
+		"firefox",
+		"extension",
+		"options",
+		"webextension"
+	],
+	"repository": "fregante/webext-bugs",
+	"funding": "https://github.com/sponsors/fregante",
+	"license": "MIT",
+	"author": "Federico Brigante <me@fregante.com> (https://fregante.com)",
+	"sideEffects": true,
+	"type": "module",
+	"exports": {
+		"./target-blank": "./distribution/target-blank.js",
+		"./options-menu-item": "./distribution/options-menu-item.js"
+	},
+	"files": [
+		"distribution"
+	],
+	"scripts": {
+		"build": "tsc",
+		"demo:build": "parcel build --no-cache",
+		"demo:watch": "parcel watch --no-cache --no-hmr",
+		"prepack": "tsc --sourceMap false",
+		"test": "tsc --noEmit && xo && npm run demo:build",
+		"watch": "tsc --watch"
+	},
+	"xo": {
+		"envs": [
+			"browser"
+		],
+		"globals": [
+			"chrome"
+		],
+		"rules": {
+			"import/no-unassigned-import": "off"
+		}
+	},
+	"dependencies": {
+		"webext-detect": "^5.3.2",
+		"webext-tools": "^3.0.0"
+	},
+	"devDependencies": {
+		"@parcel/config-webextension": "^2.13.3",
+		"@sindresorhus/tsconfig": "^7.0.0",
+		"@types/chrome": "^0.0.299",
+		"parcel": "^2.13.3",
+		"typescript": "^5.7.3",
+		"xo": "^0.60.0"
+	},
+	"engines": {
+		"node": ">=20"
+	},
+	"@parcel/resolver-default": {
+		"packageExports": true
+	},
+	"targets": {
+		"main": false,
+		"default": {
+			"engines": {
+				"browsers": "last 1 chrome version"
+			},
+			"source": "./source/demo/manifest.json",
+			"distDir": "./.built/demo",
+			"sourceMap": {
+				"inline": true
+			},
+			"optimize": false
+		}
+	},
+	"webExt": {
+		"sourceDir": ".built/demo"
+	}
+}

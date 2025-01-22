@@ -1,0 +1,6 @@
+{
+	"type": "module",
+	"alias": {
+		"webext-bugs/*": "../$1"
+	}
+}
