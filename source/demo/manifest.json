@@ -7,6 +7,9 @@
 	"permissions": [
 		"contextMenus"
 	],
+	"optional_host_permissions": [
+		"*://*/*"
+	],
 	"background": {
 		"type": "module",
 		"service_worker": "background.ts",

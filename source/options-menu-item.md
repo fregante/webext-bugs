@@ -5,6 +5,7 @@ Chrome lets user reach the options via browser action context menu. However in S
 This helper will automatically add an "Options…" menu item to the browser action context menu where missing.
 
 ```js
+// In background.js
 import 'webext-bugs/options-menu-item';
 ```
 

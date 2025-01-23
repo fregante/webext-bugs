@@ -3,6 +3,7 @@
 Safari doesn't support `target="_blank"` links in extension pages like the options. Import this file to "polyfill" it.
 
 ```js
+// In options.js or any other extension page
 import 'webext-bugs/target-blank';
 ```
 
