@@ -18,8 +18,7 @@
 	"sideEffects": true,
 	"type": "module",
 	"exports": {
-		"./target-blank": "./distribution/target-blank.js",
-		"./options-menu-item": "./distribution/options-menu-item.js"
+		"./*": "./distribution/*.js"
 	},
 	"files": [
 		"distribution"

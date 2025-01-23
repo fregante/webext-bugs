@@ -1,5 +1,8 @@
 env:
-  IMPORT_STATEMENT: import "webext-bugs/options-menu-item"; import "webext-bugs/target-blank";
+  IMPORT_STATEMENT: |
+    import "webext-bugs/options-menu-item";
+    import "webext-bugs/target-blank";
+    import "webext-bugs/no-all-urls";
 
 # FILE GENERATED WITH: npx ghat fregante/ghatemplates/esm-lint
 # SOURCE: https://github.com/fregante/ghatemplates
