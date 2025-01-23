@@ -1,7 +1,8 @@
 import webextAlert from 'webext-alert';
 import chromeP from 'webext-polyfill-kinda';
 
-const {name} = chrome.runtime.getManifest();
+const manifest = chrome.runtime.getManifest();
+const name = manifest.short_name ?? manifest.name;
 let message = name + ' is not meant to run on *every* website. Check the documentation or readme to learn how to enable the extension on individual websites.';
 
 chrome.runtime.onInstalled.addListener(async () => {
