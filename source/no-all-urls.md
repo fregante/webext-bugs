@@ -1,5 +1,7 @@
 # webext-bugs/no-all-urls
 
+<img src="https://github.com/user-attachments/assets/62c79d16-09b1-4cd4-a689-2a05b2a70d35" align="right">
+
 Firefox and Safari let the users enable the extension on *every website* if `optional_host_permissions` or `optional_permissions` include `<all_urls>` or `*://*/*`. [More details](https://github.com/w3c/webextensions/issues/700).
 
 Generally this is not the intention of the extension developer and it can lead to unexpected behavior. The user should just enable the extension on each website individually, for example using [webext-permission-toggle](https://github.com/fregante/webext-permission-toggle).
