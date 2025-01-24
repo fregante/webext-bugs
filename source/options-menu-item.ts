@@ -11,7 +11,7 @@ if (!isChrome()) {
 	void chrome.contextMenus.remove('WEBEXT_TOOLS_OPTIONS');
 	void createContextMenu({
 		id: 'WEBEXT_BUGS_OPTIONS',
-		title: 'Options…',
+		title: 'Options',
 		contexts: 'action' in chrome ? ['action'] : ['browser_action'],
 		onclick: async () => chrome.runtime.openOptionsPage(),
 	});
