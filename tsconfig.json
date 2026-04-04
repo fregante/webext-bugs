@@ -3,6 +3,7 @@
 	"compilerOptions": {
 		"rootDir": "./source",
 		"outDir": "./distribution",
+		"types": ["chrome"],
 		"paths": {
 			"webext-bugs/*": ["./source/*.ts"]
 		},
