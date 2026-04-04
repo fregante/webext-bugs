@@ -14,6 +14,7 @@ This package exports various utilities, just import what you need.
 
 - [options-menu-item](./source/options-menu-item.md) - Firefox/Safari: Adds an "Options…" menu item.
 - [target-blank](./source/target-blank.md) - Safari: Fixes `target="_blank"` links in extension pages.
+- [reload-on-cmd-r](./source/reload-on-cmd-r.md) - Safari: Adds CMD-R / Ctrl-R to reload extension pages.
 - [no-all-urls](./source/no-all-urls.md) - Firefox/Safari: Prevents the user from enabling the extension on all websites.
 
 ## Related
