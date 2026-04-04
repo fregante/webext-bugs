@@ -11,6 +11,7 @@ export default [
 		},
 		rules: {
 			'import-x/no-unassigned-import': 'off',
+			'@typescript-eslint/strict-void-return': 'off',
 		},
 	},
 ];

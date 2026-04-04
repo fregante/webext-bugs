@@ -13,8 +13,6 @@ if (!isChrome()) {
 		id: 'WEBEXT_BUGS_OPTIONS',
 		title: 'Options',
 		contexts: 'action' in chrome ? ['action'] : ['browser_action'],
-		onclick() {
-			void chrome.runtime.openOptionsPage();
-		},
+		onclick: async () => chrome.runtime.openOptionsPage(),
 	});
 }
