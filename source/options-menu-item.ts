@@ -12,7 +12,7 @@ if (!isChrome()) {
 	void createContextMenu({
 		id: 'WEBEXT_BUGS_OPTIONS',
 		title: 'Options',
-		contexts: 'action' in chrome ? ['action'] : ['browser_action'],
+		contexts: ['action'],
 		onclick: async () => chrome.runtime.openOptionsPage(),
 	});
 }

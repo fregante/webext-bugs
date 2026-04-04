@@ -1,12 +1,11 @@
 import webextAlert from 'webext-alert';
-import chromeP from 'webext-polyfill-kinda';
 
 const manifest = chrome.runtime.getManifest();
 const name = manifest.short_name ?? manifest.name;
 let message = name + ' is not meant to run on *every* website. Check the documentation or readme to learn how to enable the extension on individual websites.';
 
 chrome.runtime.onInstalled.addListener(async () => {
-	if (await chromeP.permissions.contains({origins: ['*://*/*']})) {
+	if (await chrome.permissions.contains({origins: ['*://*/*']})) {
 		console.warn(name + ' was granted access to all websites by the user and it’s now been removed. https://github.com/fregante/webext-bugs/blob/main/source/no-all-urls.md');
 		await chrome.permissions.remove({
 			origins: [

@@ -35,8 +35,6 @@ You also have to specify `action` in the manifest, even if it's empty, and enabl
 }
 ```
 
-In MV2 the key is `browser_action`.
-
 ## Context
 
 - Background
