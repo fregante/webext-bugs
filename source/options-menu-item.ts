@@ -6,9 +6,7 @@ if (!manifest.options_page && !manifest.options_ui) {
 	console.warn('webext-bugs/options-menu-item: No options page found in the manifest');
 }
 
-if (!isChrome()) {
-	// TODO: Drop in June 2025. Helps migrating from `webext-tools`
-	void chrome.contextMenus.remove('WEBEXT_TOOLS_OPTIONS');
+if (!isChrome() && 'contextMenus' in chrome) {
 	void createContextMenu({
 		id: 'WEBEXT_BUGS_OPTIONS',
 		title: 'Options',
