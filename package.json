@@ -35,7 +35,7 @@
 		"filter-altered-clicks": "^2.1.1",
 		"webext-alert": "^1.1.0",
 		"webext-detect": "^5.3.2",
-		"webext-tools": "^3.0.0"
+		"webext-tools": "^4.0.2"
 	},
 	"devDependencies": {
 		"@parcel/config-webextension": "^2.16.4",

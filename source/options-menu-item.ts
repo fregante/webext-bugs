@@ -1,5 +1,5 @@
 import {isChrome} from 'webext-detect';
-import {createContextMenu} from 'webext-tools';
+import createContextMenu from 'webext-tools/create-context-menu.js';
 
 const manifest = chrome.runtime.getManifest();
 if (!manifest.options_page && !manifest.options_ui) {
