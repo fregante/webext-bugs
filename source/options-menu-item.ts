@@ -2,7 +2,7 @@ import {isChrome} from 'webext-detect';
 import createContextMenu from 'webext-tools/create-context-menu.js';
 
 const manifest = chrome.runtime.getManifest();
-if (!manifest.options_page && !manifest.options_ui) {
+if (manifest.options_page === undefined && manifest.options_ui === undefined) {
 	console.warn('webext-bugs/options-menu-item: No options page found in the manifest');
 }
 
