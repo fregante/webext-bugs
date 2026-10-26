@@ -36,7 +36,7 @@
 	],
 	"dependencies": {
 		"filter-altered-clicks": "^2.1.1",
-		"webext-alert": "^1.1.0",
+		"webext-alert": "^2.0.1",
 		"webext-detect": "^6.0.0",
 		"webext-tools": "^4.1.2"
 	},

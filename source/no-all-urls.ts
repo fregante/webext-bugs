@@ -1,4 +1,4 @@
-import webextAlert from 'webext-alert';
+import {alert} from 'webext-alert';
 
 const manifest = chrome.runtime.getManifest();
 const name = manifest.short_name ?? manifest.name;
@@ -28,7 +28,7 @@ chrome.permissions.onAdded.addListener(async permissions => {
 		],
 	});
 
-	await webextAlert(message);
+	await alert(message);
 });
 
 export function customizeNoAllUrlsErrorMessage(newMessage: string) {
