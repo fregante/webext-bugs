@@ -2,6 +2,29 @@
 	"name": "webext-bugs",
 	"version": "2.0.2",
 	"description": "WebExtension module: Useful fixes and workarounds for browser extension shortcomings",
+	"license": "MIT",
+	"repository": "fregante/webext-bugs",
+	"funding": "https://github.com/sponsors/fregante",
+	"author": "Federico Brigante <me@fregante.com> (https://fregante.com)",
+	"type": "module",
+	"exports": {
+		"./*": "./distribution/*.js"
+	},
+	"sideEffects": true,
+	"engines": {
+		"node": ">=24"
+	},
+	"scripts": {
+		"build": "tsc",
+		"demo:build": "parcel build --no-cache",
+		"demo:watch": "parcel watch --no-cache --no-hmr",
+		"prepare": "tsc --sourceMap false",
+		"test": "tsc --noEmit && xo && npm run demo:build",
+		"watch": "tsc --watch"
+	},
+	"files": [
+		"distribution"
+	],
 	"keywords": [
 		"browser",
 		"chrome",
@@ -11,43 +34,20 @@
 		"options",
 		"webextension"
 	],
-	"repository": "fregante/webext-bugs",
-	"funding": "https://github.com/sponsors/fregante",
-	"license": "MIT",
-	"author": "Federico Brigante <me@fregante.com> (https://fregante.com)",
-	"sideEffects": true,
-	"type": "module",
-	"exports": {
-		"./*": "./distribution/*.js"
-	},
-	"files": [
-		"distribution"
-	],
-	"scripts": {
-		"build": "tsc",
-		"demo:build": "parcel build --no-cache",
-		"demo:watch": "parcel watch --no-cache --no-hmr",
-		"prepack": "tsc --sourceMap false",
-		"test": "tsc --noEmit && xo && npm run demo:build",
-		"watch": "tsc --watch"
-	},
 	"dependencies": {
 		"filter-altered-clicks": "^2.1.1",
-		"webext-alert": "^1.1.0",
-		"webext-detect": "^5.3.2",
-		"webext-tools": "^4.0.2"
+		"webext-alert": "^2.0.1",
+		"webext-detect": "^6.0.0",
+		"webext-tools": "^4.1.2"
 	},
 	"devDependencies": {
 		"@parcel/config-webextension": "^2.16.4",
 		"@sindresorhus/tsconfig": "^8.1.0",
-		"@types/chrome": "^0.1.39",
-		"globals": "^17.4.0",
+		"@types/chrome": "^0.3.6",
+		"globals": "^17.13.0",
 		"parcel": "^2.16.4",
-		"typescript": "^6.0.2",
-		"xo": "^2.0.2"
-	},
-	"engines": {
-		"node": ">=20"
+		"typescript": "^6.0.3",
+		"xo": "^5.0.1"
 	},
 	"@parcel/resolver-default": {
 		"packageExports": true
